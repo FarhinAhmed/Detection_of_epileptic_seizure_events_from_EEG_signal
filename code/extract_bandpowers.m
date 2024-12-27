@@ -1,9 +1,9 @@
 clc
 clear all
 close all
-load filt_chb01_03.mat
-load chb01_03.mat
-load datacut_01_03_ch1.mat
+load chb01_03.mat % raw file
+load filt_chb01_03.mat %filtered eeg
+load datacut_01_03_ch1.mat % epoched eeg
 [r,c]=size(cut_data);
 fs = 256;
 %% entropy
@@ -27,7 +27,7 @@ fs = 256;
 % end
 % plot(p(2990:3100))
 
-%% FFT
+%% FFT - Fast Fourier Transform
 % Ts=1/fs;
 % filtered_eeg=cut_data(3036,:);
 % t=0:Ts:length(filtered_eeg);
